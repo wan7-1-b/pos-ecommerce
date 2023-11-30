@@ -23,7 +23,7 @@ import Amount from './Amount.vue'
                     class="h-24 w-24 flex-none rounded-lg"
                 >
                 <div class="flex-auto space-y-2">
-                    <h3 class="text-gray-900">sku:{{ item.sku }}</h3>
+                    <h3 class="text-gray-900">SKU:{{ item.sku }}</h3>
                     <h3 class="text-gray-900"> {{ item.name }}</h3>
                     <p>{{ formatCurrency(item.price) }}</p>
                     <p>Cantidad: {{ item.quantity }}</p>
@@ -36,7 +36,7 @@ import Amount from './Amount.vue'
                                 {{ formatCurrency(sale.subtotal) }}
                             </Amount>
                             <Amount>
-                                <template #label>Impuestos:</template>
+                                <template #label>IVA:</template>
                                 {{ formatCurrency(sale.taxes) }}
                             </Amount>
                             <Amount v-if="sale.discount" class="bg-green-200 p-2">
@@ -45,7 +45,7 @@ import Amount from './Amount.vue'
                             </Amount>
                          
                             <Amount>
-                                <template #label>Total a Pagado:</template>
+                                <template #label>Total Pagado:</template>
                                 {{ formatCurrency(sale.total) }}
                             </Amount>
                     </dl>

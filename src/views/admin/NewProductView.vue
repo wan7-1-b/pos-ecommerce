@@ -52,7 +52,7 @@
                 > 
                     <FormKit
                             type="text"
-                            label="Sku"
+                            label="SKU"
                             name="sku"
                             placeholder="Codigo del Producto"
                             validation="required"

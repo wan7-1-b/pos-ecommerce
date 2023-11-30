@@ -10,7 +10,7 @@
         <div>
            <Logo />
            <div class="flex gap-5 text-white">
-             <h2 class="text-lg font-extrabold">Filtros:</h2>
+             <h2 class="text-lg font-extrabold">Filtrar por:</h2>
              <div class="flex items-center gap-2 "
                     v-for="category in products.categories"
                     :key="category.id"

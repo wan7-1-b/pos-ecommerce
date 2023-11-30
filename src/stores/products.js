@@ -10,8 +10,8 @@ export const useProductsStore = defineStore('products', () => {
     const selectedCategory = ref(1)
     const categories = [
         { id: 1, name:'Motor'},
-        { id: 2, name:'Suspension'},
-        { id: 3, name:'Direccion'},
+        { id: 2, name:'Suspensión'},
+        { id: 3, name:'Dirección'},
         { id: 4, name:'Electricidad'},
         { id: 5, name:'Embrague'},
         { id: 6, name:'Lubricantes'},

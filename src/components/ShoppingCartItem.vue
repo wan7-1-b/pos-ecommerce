@@ -17,7 +17,7 @@
             class="h-24 w-24 flex-none rounded-md"
         />
         <div class="flex-auto space-y-2">
-            <h3 class="text-gray-600">sku:{{ item.sku }}</h3>
+            <h3 class="text-gray-600">SKU:{{ item.sku }}</h3>
             <h3 class="text-gray-900">{{ item.name }}</h3>
             <p>{{ formatCurrency(item.price) }}</p>
 

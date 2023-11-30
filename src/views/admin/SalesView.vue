@@ -3,7 +3,7 @@
     import VueTailwindDatePicker from 'vue-tailwind-datepicker'
     import { useSalesStore } from '../../stores/sales'
     import SalesDetails from '../../components/SaleDetails.vue'
-import { formatCurrency } from '../../helpers';
+    import { formatCurrency } from '../../helpers'
     
 
     const sales = useSalesStore()    
