@@ -21,6 +21,7 @@ const products = useProductsStore()
             class="h-24 w-24"
         >
         <div class="space-y-2 flex-auto">
+            <h3>SKU: {{ product.sku }}</h3>
             <h3 class="text-gray-900">{{product.name}}</h3>
             <p class="font-extrabold">{{ formatCurrency (product.price) }}</p>
             <p>{{ product.availability }} en Existencia</p>

@@ -23,6 +23,7 @@ import Amount from './Amount.vue'
                     class="h-24 w-24 flex-none rounded-lg"
                 >
                 <div class="flex-auto space-y-2">
+                    <h3 class="text-gray-900">sku:{{ item.sku }}</h3>
                     <h3 class="text-gray-900"> {{ item.name }}</h3>
                     <p>{{ formatCurrency(item.price) }}</p>
                     <p>Cantidad: {{ item.quantity }}</p>

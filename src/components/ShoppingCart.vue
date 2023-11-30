@@ -12,7 +12,7 @@
 <template>
     <p v-if="cart.isEmpty" class="text-xl text-gray-900">El Carro esta vacio</p>
     <div v-else>
-        <p class="text-4xl font-bold text-gray-900">Resumen de Venta</p>
+        <p class="text-4xl my-5 font-bold text-gray-900">Resumen de Venta</p>
         <ul
             role="list"
             class="mt-6 divide-y divide-gray-200"

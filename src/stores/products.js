@@ -11,7 +11,12 @@ export const useProductsStore = defineStore('products', () => {
     const categories = [
         { id: 1, name:'Motor'},
         { id: 2, name:'Suspension'},
-        { id: 3, name:'Transmision'},
+        { id: 3, name:'Direccion'},
+        { id: 4, name:'Electricidad'},
+        { id: 5, name:'Embrague'},
+        { id: 6, name:'Lubricantes'},
+        { id: 7, name:'Frenos'}
+
 
     ]
     const q = query(

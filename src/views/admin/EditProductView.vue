@@ -63,6 +63,15 @@
                     @submit="submitHandler"
                     :actions="false"
                 >
+                     <FormKit
+                        type="text"
+                        label="Sku"
+                        name="sku"
+                        placeholder="Sku del Producto"
+                        validation="required"
+                        v-model.trim="formData.sku"
+                        :validation-messages="{ required: 'El sku del Producto es Obligatorio' }"
+                    />
                     <FormKit
                         type="text"
                         label="Nombre"

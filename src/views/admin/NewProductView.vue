@@ -10,11 +10,13 @@
   const products = useProductsStore()
   const router = useRouter()
   const formData = reactive({
+    sku: '',
     name: '',
+    image: '',
     category: '',
     price: '',
-    availability: '',
-    image: ''
+    availability: ''
+   
   })
 
   const submitHandler = async data => {
@@ -47,7 +49,16 @@
                     incomplete-message="No se puedo enviar, revisa los mensajes"
                     :actions="true"
                     @submit="submitHandler"
-                >            
+                > 
+                    <FormKit
+                            type="text"
+                            label="Sku"
+                            name="sku"
+                            placeholder="Codigo del Producto"
+                            validation="required"
+                            :validation-messages="{required: 'El Codigo del Producto es Obligatorio'}"
+                            v-model.trim="formData.sku"
+                    />           
                     <FormKit
                         type="text"
                         label="Nombre"
