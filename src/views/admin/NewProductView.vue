@@ -3,7 +3,7 @@
   import { useRouter } from "vue-router"
   import Link from '@/components/Link.vue'
   import useImage from '../../composables/useImage'
-  import { useProductsStore} from '../../stores/products'
+  import { useProductsStore } from '../../stores/products'
 
 
   const { url, onFileChange, isImageUploaded } = useImage()
@@ -15,7 +15,9 @@
     image: '',
     category: '',
     price: '',
-    availability: ''
+    availability: '',
+    aplicacion: '',
+
    
   })
 
@@ -116,6 +118,14 @@
                         :validation-messages="{required: 'La Cantidad es Obligatoria'}"
                         min="1"
                         v-model.number="formData.availability"
+                    />
+                    <FormKit
+                        type="textarea"
+                        label="Aplicacion"
+                        name="aplicacion"
+                        validation="required"
+                        :validation-messages="{required: 'Describa la aplicacion del Producto'}"
+                        v-model.trim="formData.aplicacion"
                     />
 
                 </FormKit>

@@ -25,6 +25,7 @@ const products = useProductsStore()
             <h3 class="text-gray-900">{{product.name}}</h3>
             <p class="font-extrabold">{{ formatCurrency (product.price) }}</p>
             <p>Disponible: {{ product.availability }}</p>
+            <p>Aplicación: {{ product.aplicacion }}</p>
         </div>
         <div class="flex items-center gap-3">
             <RouterLink

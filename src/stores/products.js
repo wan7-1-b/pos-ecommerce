@@ -3,8 +3,10 @@ import { defineStore } from "pinia"
 import { useFirestore, useCollection, useFirebaseStorage } from "vuefire"
 import { collection, addDoc, where, query, limit, orderBy, updateDoc, doc, getDoc, deleteDoc } from "firebase/firestore"
 import { ref as storageRef, deleteObject } from 'firebase/storage'
+// import { useModalStore } from "./modal"
 
 export const useProductsStore = defineStore('products', () => {
+   // const modal = useModalStore()
     const db = useFirestore()
     const storage = useFirebaseStorage()
     const selectedCategory = ref(1)
@@ -56,6 +58,7 @@ export const useProductsStore = defineStore('products', () => {
         }
        
     }
+   
 
     const categoryOptions = computed(() => {
         const options = [
@@ -69,9 +72,12 @@ export const useProductsStore = defineStore('products', () => {
     const noResults = computed(() => productsCollection.value.length === 0)
 
     const filterProducts = computed(() => {
+        
         return productsCollection.value
             .filter( product => product.category === selectedCategory.value)
             .filter(product => product.availability > 0)
+    
+            
     })
     return{
         createProduct,
@@ -82,6 +88,8 @@ export const useProductsStore = defineStore('products', () => {
         categoryOptions,
         noResults,
         deleteProduct,
-        filterProducts
+        filterProducts,
+       
+        
     }
 })

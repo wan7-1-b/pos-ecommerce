@@ -16,10 +16,12 @@
           const url = await getDownloadURL( ref(storage, `products/producto${i}.jpg`) );
 
           addDoc(productsCollection, {
+              sku: products[i - 1].sku,
               name: products[i - 1 ].name,
               price: products[i - 1 ].price,
               availability: products[i - 1 ].availability,
               category: products[i - 1 ].category,
+              aplicacion: [i - 1 ].aplicacion,
               image: url
           }).then(() => {
             console.log("Producto Agregado...");

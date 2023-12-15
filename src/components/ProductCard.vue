@@ -1,7 +1,10 @@
 <script setup>
     import { useCartStore } from '../stores/cart'
     import { formatCurrency } from '../helpers'
+    import { useProductsStore } from '../stores/products'
 
+    
+    //const modalProduct = useProductsStore()
     const cart = useCartStore()
 
     defineProps({
@@ -23,6 +26,7 @@
         <h3 class="text-xl font-black text-gray-500">{{ product.name }}</h3>
         <p class="text-gray-500">Disponible: {{ product.availability }}</p>
         <p class="text-2xl font-extrabold text-gray-900">{{ formatCurrency( product.price ) }}</p>
+        <p>Aplicación: {{ product.aplicacion }}</p>
 
         <button 
             type="button"
@@ -33,6 +37,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
         </button>
+      
 
     </div>
     </div>

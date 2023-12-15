@@ -111,6 +111,15 @@
                         step="1"
                         min="0"
                     />
+                    <FormKit
+                        type="textarea"
+                        label="Aplicación"
+                        name="aplicacion"
+                        placeholder="Aplicación del Producto"
+                        validation="required"
+                        v-model.trim="formData.aplicacion"
+                        :validation-messages="{ required: 'La aplicación del Producto es Obligatorio' }"
+                    />
 
                     <div v-if="isImageUploaded">
                         <p class="font-black">Imagen Nueva:</p>

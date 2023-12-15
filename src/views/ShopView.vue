@@ -4,9 +4,12 @@
    import ProductCard from '../components/ProductCard.vue'
    import ShoppingCart from '../components/ShoppingCart.vue'
    import { useProductsStore } from '../stores/products'
+   // import Modal from '../components/Modal.vue'
+   
    
    const products = useProductsStore()
    const { filterProducts, noResults } = storeToRefs(products)
+
     
 </script>
 <template>
@@ -23,6 +26,8 @@
                 :key="product.id"
                 :product="product" 
              />
+             
+            
             </div>
         </div>
         <aside class="lg:w-1/3 lg:screen lg:overflow-y-scroll pt-10 py-24 px-10">
